@@ -27,22 +27,20 @@ import org.bukkit.inventory.Slot;
 
 public class kamimain extends JavaPlugin{
 	
-	private final mainlistener TheListener = new mainlistener();	
-	
-Logger log = Logger.getLogger("Minecraft");
-String pluginname = "Kamakazi";
+	Logger log = Logger.getLogger("Minecraft");
+	String pluginname = "Kamakazi";
+	Server server;
+
 
 	public void onDisable() {
 		log.info("[" + pluginname + "] " + pluginname + " has been disabled.");
 		}
+	
 	public void onEnable() {
 		PluginManager pm = getServer().getPluginManager();
 		log.info("[" + pluginname + "] " + pluginname + " has been enabled.");
 		log.info("[" + pluginname + "] Created by CainFoool");
-		pm.registerEvent(Event.Type.PLAYER_INTERACT, new mainlistener(), Priority.Normal, this);
 	}
-	
-	Server server;
 	
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;
