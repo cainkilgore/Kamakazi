@@ -1,0 +1,8 @@
+name: Kamakazi
+version: 0.1
+author: CainFoool
+main: me.cain.kamakazi.kamimain
+commands:
+   kk:
+      description: Blows yourself up!
+      usage: 
